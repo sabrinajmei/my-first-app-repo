@@ -14,7 +14,7 @@ load_dotenv() #go look in the .env file for any env vars
 
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
-# pauses exeuction of program wherever it is in the code, so u can more specifically investigate bugs
+# pauses execution of program wherever it is in the code, so u can more specifically investigate bugs
 # breakpoint()
 
 # 3. FUNCTIONS
