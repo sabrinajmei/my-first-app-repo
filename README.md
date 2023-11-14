@@ -11,7 +11,7 @@ conda activate my-first-env
 Create requirements.txt file for packages:
 - Right click left sidebar, create a new file outside of the app folder
 - Name it "requirements.txt"
-- In that file, type out all the packages you need: requests, plotly, pandas
+- In that file, type out all the packages you need: requests, plotly, pandas, python-dotenv
 
 Install packages:
 ```sh
