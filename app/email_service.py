@@ -34,7 +34,6 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
         print(type(err))
         print(err)
 
-
 # USAGE CODE
 my_content = """
 
