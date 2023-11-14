@@ -1,4 +1,4 @@
-# my-first-app-repo
+# sabrinas-first-app-repo
 Repo creation in-class practice 
 
 # Setup
