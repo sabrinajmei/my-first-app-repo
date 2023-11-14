@@ -40,14 +40,16 @@ data = parsed_response["data"]
 print("-------------------------")
 print("LATEST UNEMPLOYMENT RATE:")
 #print(data[0])
-print(f"{data[0]['value']}%", "as of", data[0]["date"])
 
+latest_rate = data[0]['value']
+latest_date = data[0]["date"]
+
+print(f"{latest_rate}%","as of", latest_date)
 
 # Challenge B
 #
 # What is the average unemployment rate for all months during this calendar year?
 # ... How many months does this cover?
-
 
 this_year = [d for d in data if "2023-" in d["date"]]
 
