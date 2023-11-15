@@ -33,7 +33,6 @@ def fetch_data():
 
 #main conditional
 if __name__ == "__main__":
-    Pass
 
     # 4. WORKING CODE
     data = fetch_data()
