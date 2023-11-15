@@ -4,6 +4,7 @@ requests
 plotly
 pandas
 python-dotenv
+flask
 
 # test
 pytest
