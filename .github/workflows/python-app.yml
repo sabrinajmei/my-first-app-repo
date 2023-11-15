@@ -35,5 +35,11 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
+      env:
+        # set environment variable to use during testing
+        # ... using the repository secret value set securely via repo settings
+        MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
+        MAILGUN_SENDER_ADDRESS = os.getenv("MAILGUN_SENDER_ADDRESS")
+        MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN") # "sandbox__________.mailgun.org"
       run: |
         pytest
