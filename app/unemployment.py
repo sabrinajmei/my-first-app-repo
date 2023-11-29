@@ -1,6 +1,7 @@
 # 1. IMPORTS
 
 # packages
+from dotenv import load_dotenv
 import requests
 from plotly.express import line
 from app.alpha import API_KEY
