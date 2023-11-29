@@ -33,7 +33,11 @@ python -m app.my_script
 ```
 Run the unemployment report:
 ```sh
-python app/unemployment.py
+python - m app.unemployment
+```
+Run the stocks report:
+```sh
+python -m app.stocks
 ```
 ### Web App
 Run the web app (then view in the browser at http://localhost:5000/):
