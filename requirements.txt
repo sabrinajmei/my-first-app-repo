@@ -9,4 +9,5 @@ flask
 # test
 pytest
 
+# production server needs this to run the web app
 gunicorn
