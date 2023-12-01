@@ -1,10 +1,13 @@
 # 1. IMPORTS
+
 # packages
 from dotenv import load_dotenv
 import requests
 from plotly.express import line
+from app.alpha import API_KEY
+from app.email_service import send_email
+
 #modules
-import os
 import json
 from pprint import pprint
 from statistics import mean
@@ -12,12 +15,22 @@ from statistics import mean
 # 2. ENVIRONMENT VARIABLES AND CONSTANTS
 load_dotenv() #go look in the .env file for any env vars
 
-API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
 # pauses execution of program wherever it is in the code, so u can more specifically investigate bugs
 # breakpoint()
 
 # 3. FUNCTIONS
+
+def format_pct(my_number):
+    """
+    Formats a percentage number like 3.6555554 as percent, rounded to two decimal places.
+
+    Param my_number (float) like 3.6555554
+
+    Returns (str) like '3.66%'
+    """
+    return f"{my_number:.2f}%"
+
 def fetch_data():
     request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 
@@ -75,3 +88,4 @@ if __name__ == "__main__":
 
     fig = line(x=dates, y=rates, title="United States Unemployment Rate over time", labels= {"x": "Month", "y": "Unemployment Rate"})
     fig.show()
+
